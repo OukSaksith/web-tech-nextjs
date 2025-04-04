@@ -7,8 +7,10 @@ import Loading from '@/components/layouts/loading';
 import { getTranslation } from '@/i18n';
 import { useSession } from 'next-auth/react';
 import SignInPage from './app/signIn/page';
+import { Backend_URL } from '@/lib/Constants';
 
 function App({ children }: PropsWithChildren) {
+    console.log(Backend_URL);
     const themeConfig = useSelector((state: IRootState) => state.themeConfig);
     const dispatch = useDispatch();
     const { initLocale } = getTranslation();

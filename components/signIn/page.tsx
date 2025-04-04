@@ -10,6 +10,7 @@ import IconLockDots from '../icon/icon-lock-dots';
 // import IconInstagram from '../icon/icon-instagram';
 // import IconTwitter from '../icon/icon-twitter';
 import LanguageDropdown from '../language-dropdown';
+import { Frontend_URL } from '@/lib/Constants';
 
 const Login = () => {
     const [error, setError] = useState<string | null>(null);
@@ -29,7 +30,7 @@ const Login = () => {
             setError(res.error);
         } else {
             setError(null);
-            router.push('http://localhost:3000');
+            router.push(Frontend_URL!);
         }
     };
     return (
